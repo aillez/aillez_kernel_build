@@ -12,3 +12,20 @@ yay -Sy --needed lib32-libusb-compat android-sdk android-sdk-platform-tools andr
 
 
 https://github.com/TheNoFace/kernel_oneplus_msm8998
+
+
+
+
+
+lineage_oneplus5_defconfig
+
+
+make O=out ARCH=arm64 LLVM=$PWD/llvm-16/bin/ LLVM_IAS=$PWD/llvm-16/bin/ LD=ld.lld lineage_oneplus5_defconfig
+
+
+make O=out ARCH=arm64 LLVM=$PWD/llvm-16/bin/ LLVM_IAS=$PWD/llvm-16/bin/ LD=ld.lld CROSS_COMPILE=aarch64-elf- CROSS_COMPILE_ARM32=arm-eabi- CROSS_COMPILE_COMPAT=arm-eabi- -j8
+
+
+
+
+
